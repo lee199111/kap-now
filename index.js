@@ -5,7 +5,7 @@ const {readFile} = require('fs-extra');
 
 const action = async context => {
 	const uploadEndpoint = 'https://api.zeit.co/v2/now/files';
-	const deploymentEndpoint = 'https://api.zeit.co/v2/now/deployments';
+	const deploymentEndpoint = 'https://api.zeit.co/v11/now/deployments';
 	const Authorization = 'Bearer ' + context.config.get('token');
 
 	const filePath = await context.filePath();
